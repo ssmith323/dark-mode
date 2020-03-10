@@ -1,1 +1,8 @@
-<p>home works!</p>
+<form [formGroup]="form" (submit)="saveForm()">
+  <app-text [control]="form.get('title')" label="Title"></app-text>
+  <app-select
+    [control]="form.get('status')"
+    label="Status"
+    [options]="statusOptions"
+  ></app-select>
+</form>
